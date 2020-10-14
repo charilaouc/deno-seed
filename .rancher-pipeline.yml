@@ -2,7 +2,9 @@ stages:
 - name: docker
   steps:
   - runScriptConfig:
-      image: gcc:latest
-      shellScript: ./build.sh
+      image: node:latest
+      shellScript: |-
+        cd frontend
+        npm start
 timeout: 60
 notification: {}
