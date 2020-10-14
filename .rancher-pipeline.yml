@@ -1,11 +1,7 @@
 stages:
 - name: docker
   steps:
-  - runScriptConfig:
-      image: node:latest
-      shellScript: |-
-        cd frontend
-        npm i
-        npm start
+  - applyYamlConfig:
+      path: ./docker-compose.production.yml
 timeout: 60
 notification: {}
