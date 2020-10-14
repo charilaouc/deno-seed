@@ -1,0 +1,10 @@
+stages:
+- name: docker
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: app
+      registry: 127.0.0.1:34437
+timeout: 60
+notification: {}
